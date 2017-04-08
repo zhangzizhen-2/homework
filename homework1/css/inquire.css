@@ -1,0 +1,246 @@
+.files, .kinds, .adress, .nav, .big-box {
+  background-color: #fff; }
+
+.files, .files .title, .norms, .adress, .nav, .big-box {
+  padding-left: 0.15rem;
+  padding-right: 0.15rem; }
+
+.header {
+  height: 0.44rem;
+  line-height: 0.44rem;
+  text-align: center;
+  font-size: 0.16rem;
+  color: #333333;
+  position: relative; }
+  .header a {
+    color: #333333; }
+  .header .left {
+    position: absolute;
+    left: 0.15rem; }
+  .header .right {
+    position: absolute;
+    right: 0.15rem; }
+
+.sec-bg {
+  background-color: #eee; }
+
+.banner img {
+  height: 1.45rem;
+  width: 100%; }
+
+.files .title {
+  padding-bottom: 0.04rem;
+  font-size: 0.16rem;
+  color: #4f99f2; }
+.files .case .case-box {
+  padding-bottom: 0.1rem; }
+  .files .case .case-box .case-til {
+    font-size: 0.14rem; }
+  .files .case .case-box .case-text {
+    margin-top: 0.04rem;
+    padding-left: 0.18rem;
+    line-height: 0.18rem;
+    font-size: 0.13rem; }
+
+.kinds {
+  margin-top: 0.1rem; }
+  .kinds .more {
+    height: 0.5rem;
+    background-color: #4f99f2;
+    line-height: 0.5rem;
+    text-align: center;
+    font-size: 0.16rem;
+    color: #fff;
+    font-weight: normal; }
+  .kinds .pic {
+    text-align: center;
+    padding-top: 0.22rem;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid #e5e5e5; }
+    .kinds .pic img {
+      height: 2.08rem; }
+  .kinds .cont .name {
+    padding: 0.15rem;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 0.16rem;
+    color: #333; }
+  .kinds .cont .list {
+    border-bottom: 1px solid #e5e5e5;
+    padding-top: 0.12rem;
+    padding-bottom: 0.12rem;
+    display: flex; }
+    .kinds .cont .list li {
+      flex: 1;
+      text-align: center;
+      border-right: 1px solid #e5e5e5; }
+    .kinds .cont .list .conf {
+      margin-top: 0.1rem;
+      color: #4f99f2; }
+
+.no-right {
+  border-right: none; }
+
+.norms {
+  display: flex;
+  border-bottom: 1px solid #e5e5e5; }
+  .norms .box {
+    flex: 1;
+    padding-top: 0.05rem;
+    padding-bottom: 0.05rem; }
+    .norms .box p {
+      line-height: 0.22rem; }
+
+.adress dl {
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+  display: flex; }
+  .adress dl dt {
+    flex: 1; }
+    .adress dl dt img {
+      height: 0.45rem; }
+  .adress dl dd {
+    flex: 5; }
+    .adress dl dd .sure {
+      color: #666666;
+      margin-top: 0.09rem; }
+      .adress dl dd .sure a {
+        color: #4f99f2; }
+.adress .people p {
+  padding-bottom: 0.1rem; }
+  .adress .people p .left {
+    display: inline-block;
+    width: 15%;
+    margin-left: 0.15rem;
+    color: #666666; }
+  .adress .people p .right {
+    display: inline-block;
+    width: 60%; }
+.adress .map p {
+  padding-top: 0.04rem;
+  padding-bottom: 0.04rem; }
+.adress .map .map-map {
+  width: 100%;
+  height: 1.8rem; }
+
+.nav {
+  padding-top: 0.25rem; }
+  .nav h3 {
+    margin-top: 0.1rem; }
+    .nav h3 img {
+      height: 0.16rem; }
+  .nav .bigbox {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.06rem; }
+    .nav .bigbox dl {
+      width: 50%;
+      text-align: center;
+      color: #4f99f2;
+      padding-top: 0.1rem;
+      padding-bottom: 0.1rem; }
+      .nav .bigbox dl dt img {
+        height: 0.8rem; }
+      .nav .bigbox dl dd {
+        margin-top: 0.1rem; }
+
+.big-box .approve {
+  padding-top: 0.15rem; }
+  .big-box .approve .app {
+    display: flex;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem; }
+    .big-box .approve .app p {
+      flex: 1;
+      height: 0.38rem;
+      line-height: 0.38rem; }
+    .big-box .approve .app .left {
+      padding-left: 0.3rem; }
+    .big-box .approve .app .right {
+      position: relative; }
+      .big-box .approve .app .right .post {
+        position: absolute;
+        top: 24%;
+        left: 0; }
+      .big-box .approve .app .right span {
+        position: absolute;
+        left: 20%; }
+      .big-box .approve .app .right i {
+        position: absolute;
+        right: 0.3rem; }
+
+.product dl {
+  text-align: center; }
+  .product dl dt {
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+    border-bottom: 1px solid #e5e5e5; }
+    .product dl dt img {
+      height: 1.09rem; }
+  .product dl dd {
+    margin-top: 0.05rem; }
+    .product dl dd p {
+      line-height: 0.2rem;
+      color: #8c8c8c; }
+
+.texts {
+  margin-top: 0.15rem;
+  text-indent: 0.3rem;
+  line-height: 0.21rem; }
+
+.buy {
+  display: flex; }
+  .buy p {
+    flex: 1;
+    position: relative;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid #e5e5e5; }
+    .buy p .small {
+      position: absolute;
+      top: 30%; }
+    .buy p .buys {
+      padding-left: 30%; }
+
+.lists li {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative; }
+  .lists li i {
+    position: absolute;
+    right: 0.15rem; }
+
+.pro {
+  display: flex;
+  justify-content: space-around; }
+  .pro dl {
+    width: 30%;
+    padding-bottom: 0.15rem;
+    padding-top: 0.15rem; }
+    .pro dl dt img {
+      width: 100%; }
+    .pro dl dd {
+      margin-top: 0.1rem; }
+      .pro dl dd .cont {
+        line-height: 0.15rem;
+        white-space: normal;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .pro dl dd .pic {
+        margin-top: 0.06rem; }
+        .pro dl dd .pic img {
+          height: 0.12rem; }
+
+.bottom {
+  height: 0.53rem;
+  line-height: 0.53rem;
+  text-align: center;
+  font-size: 0.13rem; }
+
+.h2,
+h3 {
+  color: #4f99f2;
+  font-weight: normal;
+  text-align: center; }
+
+/*# sourceMappingURL=inquire.css.map */
