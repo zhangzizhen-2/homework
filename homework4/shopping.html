@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en" ng-app='add'>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/shopping.css">
+</head>
+<body ng-controller='ctrl'>
+	<header class="header">
+		<a href="#" class='left'><i class="iconfont icon-zuojiantou"></i></a>
+		订单支付
+		<a href="#" class="right"><i class="iconfont icon-xinxi"></i></a>
+	</header>
+	<section class="section">
+		<div class="info">
+			<div class="top">
+				<div class="info-peo">
+					<span class="name">路飞</span>
+					<span class="tel">138****8888</span>
+				</div>
+				<div class="address">
+					<i class="iconfont icon-weizhi1"></i>北京市海淀区知春路北京市海淀区知春路北京市海淀区 知春路
+				</div>
+			</div>
+			<img src="images/long.png" alt="">
+		</div>
+		<div class="car">
+			<div class="box">
+				<p class="shop"><i class="iconfont icon-dianpu orange"></i><span>恒之然旗舰店</span></h2>
+			</div>
+			<dl class="cont">
+				<dt><img src="images/img.png" alt=""></dt>
+				<dd>
+					<p class="title">维维嚼益嚼水果大豆棒橙味维维嚼 益嚼水果大豆棒橙味...</p>
+					<div class="bottom">
+						<div class="left">
+							<p class="col-red">￥<span class="price">{{price.toFixed(2)}}</span></p>
+							<p><del>￥1000.00</del></p>
+						</div>
+						<div class="right">
+							<span class="del" ng-click="decrement()">-</span>
+							<span class='num' ng-bind="count"></span>
+							<span class='add' ng-click="increment()">+</span>	
+						</div>
+					</div>
+				</dd>
+			</dl>
+			<ul class="all-price">
+				<li>
+					<span class="all-left">商品总金额：</span>
+					<span class="all-right">￥<span class="all-p">{{allPrice.toFixed(2)}}</span></span>
+				</li>
+				<li>
+					<span class="all-left">运费：</span>
+					<span class="all-right">￥<span class="all-more">{{freight.toFixed(2)}}</span></span>
+				</li>
+				<li>
+					<span class="all-left">总额(含运费)：</span>
+					<span class="all-right col-red">￥<span class="all-p">{{addPrice.toFixed(2)}}</span></span>
+				</li>
+			</ul>
+		</div>
+		<div class="alipay">
+			<div class="box">
+				<div class="box-left">
+					余额支付 <span>¥<b>100.00</b></span>
+				</div>
+				<div class="box-right">
+					 <label class="toggle-radio">
+				        <input type="checkbox" ng-model="isSelected">
+
+				        <span class="track">
+				            <div class="icon"></div>
+				        </span>
+    				</label>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-left">
+					奖金支付 <span>¥<b>100.00</b></span>
+				</div>
+				<div class="box-right">
+					 <label class="toggle-radio">
+				        <input type="checkbox" checked="checked"  ng-model="isSelect">
+				        <span class="track">
+				            <div class="icon"></div>
+				        </span>
+    				</label>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-left">
+					其他支付方式
+				</div>
+				<div class="box-right">
+					 <i class='iconfont icon-youjiantou'></i>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="tol-price">
+			<p class="top col-red">总计：￥<span>{{addPrice.toFixed(2)}}</span></p>
+			<p class="col-gray">(含运费)</p>
+		</div>
+		<div class="end" ng-click="money()">
+			提交订单
+		</div>
+		<div class="prompt" ng-show="isSelected" ng-hide="!isSelect">
+			金额不足，请选择其他支付方式！
+		</div>
+	</footer>
+	<script src="js/angular.js"></script>
+	<script>
+		var app = angular.module('add',[]);
+		app.controller('ctrl',function($scope){
+			// 数量
+			$scope.count = 0;
+			// 单价
+			$scope.price = 980.00;
+			// 总价
+			$scope.allPrice = 0.00;
+			// 运费
+			$scope.freight = 10.00;
+			// 含运费的总价
+			$scope.addPrice = 0.00;
+			$scope.decrement = function(){
+				if($scope.count <= 0){
+					$scope.count = 0;
+					return;
+				}
+				$scope.count--;
+				if($scope.count == 0){
+					$scope.allPrice = 0
+				}
+				// 商品总金额
+				$scope.allPrice = $scope.count * $scope.price + $scope.freight
+				// 含运费险的总金额
+				$scope.addPrice = $scope.count * $scope.price + $scope.freight
+			}
+			$scope.increment = function(){
+				if($scope.count >= 10){
+					$scope.count = 10;
+				}
+				$scope.count++;
+				// 商品总金额
+				$scope.allPrice = $scope.count * $scope.price + $scope.freight
+				// 含运费险的总金额
+				$scope.addPrice = $scope.count * $scope.price + $scope.freight
+			}
+			$scope.money = function(){
+				window.location.href = 'index.html'
+			}
+		})
+	
+	</script>
+</body>
+</html>
