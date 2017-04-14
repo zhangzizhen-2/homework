@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			list-style: none;
+			width: 122px;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+			height: 30px;
+			margin-top: 30px;
+		}
+		li{
+			float: left;
+			width: 40px;
+			height: 30px;
+			text-align: center;
+			line-height: 30px;
+			box-sizing: border-box;
+			border-right: 1px solid #ccc;
+		}
+		.no{
+			border-right: none;
+		}
+	</style>
+</head>
+<body ng-app="app">
+	<div class="box" ng-controller="myController">
+		<p>单价：{{price}}</p>	
+		<ul>
+			<li ng-click="decre()">-</li>
+			<li ng-bind='tet'></li>
+			<li class='no' ng-click="incre()">+</li>
+		</ul>
+		<p>总价：{{allPrice}}</p>
+	</div>
+	<script src="js/angular.js"></script>
+	<script>
+		var app = angular.module('app',[]);
+		app.controller('myController',function($scope){
+			$scope.price = 100;
+			$scope.tet = 0;
+			$scope.allPrice = 0;
+			$scope.decre = function(){
+				if($scope.tet <= 0){
+					$scope.tet = 0;
+					return;
+				}
+				$scope.tet--;
+				$scope.allPrice = $scope.price * $scope.tet
+			}
+			$scope.incre = function(){
+				$scope.tet++;
+				$scope.allPrice = $scope.price * $scope.tet
+			}
+		})
+
+	</script>
+</body>
+</html>
